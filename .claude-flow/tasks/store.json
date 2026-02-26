@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "task-1772091125620-wssz1z": {
+      "taskId": "task-1772091125620-wssz1z",
+      "type": "implementation",
+      "description": "Set up Vercel deployment configuration for Next.js 15 landing page",
+      "priority": "normal",
+      "status": "pending",
+      "progress": 0,
+      "assignedTo": [],
+      "tags": [],
+      "createdAt": "2026-02-26T07:32:05.620Z",
+      "startedAt": null,
+      "completedAt": null
+    }
+  },
+  "version": "3.0.0"
+}
