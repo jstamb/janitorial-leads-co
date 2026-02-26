@@ -1,12 +1,12 @@
 "use client";
 
-import { CheckCircle, ArrowRight, TrendingUp, Users, DollarSign } from "lucide-react";
+import { CheckCircle, ArrowRight, Calendar, DollarSign, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const stats = [
-  { icon: TrendingUp, value: "347%", label: "Avg Lead Increase" },
-  { icon: Users, value: "50+", label: "Cleaning Companies Served" },
-  { icon: DollarSign, value: "$2.3M", label: "Revenue Generated" },
+  { icon: Calendar, value: "8-15", label: "Qualified Appointments/Month" },
+  { icon: DollarSign, value: "$4,500", label: "Monthly Investment" },
+  { icon: TrendingUp, value: "80%", label: "Average Close Rate" },
 ];
 
 export function Hero() {
@@ -31,31 +31,30 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
               <span className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
               <span className="text-sm text-white font-medium">
-                Marketing Exclusively for Commercial Cleaning
+                Done-For-You Appointment Engine
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Stop Competing on Price.{" "}
+              We Book Your Sales Meetings.{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
-                Start Winning Contracts.
+                You Close The Deals.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-xl mx-auto lg:mx-0">
-              We help commercial cleaning companies escape the race to the bottom. 
-              Generate qualified leads, build authority, and grow predictably — 
-              without relying on referrals alone.
+              A done-for-you appointment engine for commercial cleaning companies. 
+              Show up. Close. Repeat.
             </p>
 
             {/* Trust Points */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
               {[
-                "No long-term contracts",
-                "Industry specialists",
-                "ROI guaranteed",
+                "No cold calling for you",
+                "Qualified decision-makers only",
+                "Results in 60 days",
               ].map((point) => (
                 <div key={point} className="flex items-center gap-2 text-white/90">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
@@ -67,11 +66,11 @@ export function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="group">
-                Get Your Free Strategy Call
+                Get Your Calendar Filled
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
-                See Case Studies
+                See How It Works
               </Button>
             </div>
           </div>
@@ -80,7 +79,7 @@ export function Hero() {
           <div className="lg:pl-12">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-6 text-center">
-                Results We Deliver
+                What You Get Every Month
               </h3>
               
               <div className="grid gap-6">
@@ -101,7 +100,7 @@ export function Hero() {
               </div>
 
               <p className="text-center text-slate-400 text-sm mt-6">
-                Based on results from 50+ cleaning company clients
+                Based on results from our commercial cleaning clients
               </p>
             </div>
           </div>

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, Phone, Mail, Calendar, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Phone, Mail, Calendar, Loader2, Shield } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 
 const benefits = [
-  "Free 30-minute strategy call",
-  "Custom growth plan for your company",
-  "Competitor analysis included",
-  "No obligation or hard sell",
+  "8-15 qualified appointments/month",
+  "We handle all the cold outreach",
+  "You just show up and close",
+  "5 appointments in 60 days guaranteed",
 ];
 
 export function Contact() {
@@ -73,11 +73,11 @@ export function Contact() {
               Let&apos;s Talk
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Stop Competing on Price?
+              Ready to Fill Your Calendar With Qualified Meetings?
             </h2>
             <p className="text-lg text-slate-400 mb-8">
-              Schedule your free strategy call. We&apos;ll analyze your current marketing, 
-              identify growth opportunities, and create a custom plan — no strings attached.
+              Book a call with our team. We&apos;ll show you exactly how our appointment 
+              engine works and how many meetings we can book for your cleaning company.
             </p>
 
             {/* Benefits */}
@@ -89,6 +89,16 @@ export function Contact() {
                 </li>
               ))}
             </ul>
+
+            {/* Guarantee */}
+            <div className="bg-green-900/30 border border-green-500/30 rounded-xl p-4 mb-8">
+              <div className="flex items-center gap-3">
+                <Shield className="w-6 h-6 text-green-400" />
+                <p className="text-green-300 font-medium">
+                  5 qualified appointments in 60 days or we work free until we deliver
+                </p>
+              </div>
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-4 pt-8 border-t border-slate-800">
@@ -120,8 +130,8 @@ export function Contact() {
                   Thank You!
                 </h3>
                 <p className="text-slate-600 mb-6">
-                  We&apos;ve received your request and will be in touch within 24 hours 
-                  to schedule your free strategy call.
+                  We&apos;ll be in touch within 24 hours to show you how we can 
+                  fill your calendar with qualified appointments.
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
@@ -135,7 +145,7 @@ export function Contact() {
                 <div className="flex items-center gap-2 mb-6">
                   <Calendar className="w-5 h-5 text-primary" />
                   <h3 className="text-xl font-semibold text-slate-900">
-                    Schedule Your Free Strategy Call
+                    Get Your Calendar Filled
                   </h3>
                 </div>
 
@@ -186,7 +196,7 @@ export function Contact() {
 
                   <div>
                     <label htmlFor="revenue" className="block text-sm font-medium text-slate-700 mb-1.5">
-                      Annual Revenue
+                      Crew Size
                     </label>
                     <select
                       id="revenue"
@@ -196,20 +206,20 @@ export function Contact() {
                       className="w-full px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                       required
                     >
-                      <option value="">Select revenue range</option>
-                      <option value="under-500k">Under $500K</option>
-                      <option value="500k-1m">$500K - $1M</option>
-                      <option value="1m-2m">$1M - $2M</option>
-                      <option value="2m-5m">$2M - $5M</option>
-                      <option value="5m-plus">$5M+</option>
+                      <option value="">Select crew size</option>
+                      <option value="1-5">1-5 employees</option>
+                      <option value="6-15">6-15 employees</option>
+                      <option value="16-30">16-30 employees</option>
+                      <option value="31-50">31-50 employees</option>
+                      <option value="50+">50+ employees</option>
                     </select>
                   </div>
 
                   <Textarea
                     id="message"
                     name="message"
-                    label="Tell us about your biggest challenge"
-                    placeholder="What is holding your business back right now?"
+                    label="What's your biggest growth challenge?"
+                    placeholder="Tell us about your current situation..."
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
@@ -229,13 +239,13 @@ export function Contact() {
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
-                        Request Free Strategy Call
+                        Get Started — $4,500/mo
                       </>
                     )}
                   </Button>
 
                   <p className="text-xs text-slate-500 text-center">
-                    We respect your privacy. No spam, ever.
+                    + $2,500 one-time setup • 5 appointments in 60 days guaranteed
                   </p>
                 </form>
               </>

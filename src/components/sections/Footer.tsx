@@ -1,16 +1,14 @@
-import { Sparkles, Mail, Phone } from "lucide-react";
+import { Sparkles, Mail, Phone, Shield } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { href: "#services", label: "Lead Generation" },
-    { href: "#services", label: "Website Design" },
-    { href: "#services", label: "Local SEO" },
-    { href: "#services", label: "Google Ads" },
-    { href: "#services", label: "Reputation Management" },
+    { href: "#how-it-works", label: "How It Works" },
+    { href: "#targets", label: "Who We Target" },
+    { href: "#pricing", label: "Pricing" },
   ],
   company: [
-    { href: "#pain-points", label: "Why Choose Us" },
-    { href: "#results", label: "Case Studies" },
+    { href: "#the-math", label: "ROI Calculator" },
+    { href: "#results", label: "Case Study" },
     { href: "#contact", label: "Contact" },
   ],
 };
@@ -28,12 +26,12 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-white text-lg leading-tight">Janitorial Leads</span>
-                <span className="text-xs text-slate-400 -mt-0.5">Growth Marketing</span>
+                <span className="text-xs text-slate-400 -mt-0.5">Appointment Engine</span>
               </div>
             </a>
             <p className="text-slate-400 text-sm mb-4">
-              Marketing exclusively for commercial cleaning companies. 
-              Stop competing on price — start winning contracts.
+              A done-for-you appointment engine for commercial cleaning companies. 
+              We book your sales meetings — you close the deals.
             </p>
             <div className="flex flex-col gap-2 text-sm text-slate-400">
               <a href="mailto:hello@janitorialleads.co" className="flex items-center gap-2 hover:text-white transition-colors">
@@ -47,7 +45,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Services</h4>
+            <h4 className="font-semibold text-white mb-4">The Service</h4>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
@@ -73,25 +71,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Guarantee */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Stay Updated</h4>
-            <p className="text-slate-400 text-sm mb-4">
-              Get cleaning industry marketing tips delivered weekly.
+            <h4 className="font-semibold text-white mb-4">Our Guarantee</h4>
+            <div className="bg-green-900/30 border border-green-500/30 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <Shield className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                <p className="text-green-300 text-sm">
+                  5 qualified appointments in 60 days or we work free until we deliver.
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-500 text-xs mt-4">
+              $4,500/month + $2,500 setup
             </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-secondary text-sm"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-secondary hover:bg-secondary-dark rounded-lg text-white font-medium text-sm transition-colors"
-              >
-                Join
-              </button>
-            </form>
           </div>
         </div>
 

@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#pain-points", label: "Your Challenges" },
-  { href: "#services", label: "Services" },
+  { href: "#how-it-works", label: "How It Works" },
+  { href: "#the-math", label: "ROI" },
   { href: "#results", label: "Results" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -26,7 +27,7 @@ export function Navigation() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-primary text-lg leading-tight">Janitorial Leads</span>
-              <span className="text-xs text-slate-500 -mt-0.5">Growth Marketing</span>
+              <span className="text-xs text-slate-500 -mt-0.5">Appointment Engine</span>
             </div>
           </a>
 
@@ -42,7 +43,7 @@ export function Navigation() {
               </a>
             ))}
             <Button size="sm">
-              Free Consultation
+              Get Started
             </Button>
           </div>
 
@@ -75,7 +76,7 @@ export function Navigation() {
               </a>
             ))}
             <Button size="sm" className="w-full">
-              Free Consultation
+              Get Started
             </Button>
           </div>
         </div>
